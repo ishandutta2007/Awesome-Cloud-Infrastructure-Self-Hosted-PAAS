@@ -30,73 +30,30 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saashosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Support & Share](#support--share)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global Platform-as-a-Service (PaaS) market is estimated at approximately **$133B–$196B** in 2026, expanding at an annual growth rate (CAGR) of ~15%–21% driven by cloud-native migration, containerization, and AI workloads. The sector exhibits a **barbell structure**: it is **highly concentrated** at the infrastructure foundation (dominated by hyperscalers like AWS, Azure, Google Cloud, and enterprise giants like Salesforce), while remaining **moderately fragmented** in the developer-facing application layer where specialized, indie-focused, and "neocloud" PaaS alternatives compete actively on developer experience (DX), edge performance, and simplicity.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[Railway](https://railway.com)**  
-
-  Modern developer cloud PaaS featuring instant Git-push deployments, visual service canvases, built-in PostgreSQL/Redis databases, and usage-based infrastructure scaling.
-
-
-
-- **[Render](https://render.com)**  
-
-  Unified cloud application platform offering managed web services, static sites, cron jobs, private networking, and zero-downtime deployments via `render.yaml`.
-
-
-
-- **[Fly.io](https://fly.io)**  
-
-  Edge-first cloud application platform running Docker containers inside lightweight Firecracker microVMs close to users across global regions.
-
-
-
-- **[Heroku (Salesforce)](https://heroku.com)**  
-
-  Pioneering cloud Platform-as-a-Service (PaaS) offering Git-based deployments, Buildpacks, managed Postgres/Redis add-ons, and simple horizontal dyno scaling.
-
-
-
-- **[DigitalOcean App Platform](https://digitalocean.com)**  
-
-  Managed PaaS built on DigitalOcean infrastructure enabling automated builds and deployments directly from GitHub/GitLab repositories and container registries.
-
-
-
-- **[Koyeb](https://koyeb.com)**  
-
-  Developer-friendly serverless PaaS providing global edge deployment, auto-scaling, native GPU instances, and Git-driven container execution.
-
-
-
-- **[Northflank](https://northflank.com)**  
-
-  Full-stack cloud deployment platform uniting multi-cloud Kubernetes orchestration, CI/CD builds, preview environments, and managed databases.
-
-
-
-- **[Porter Cloud](https://porter.run)**  
-
-  Managed PaaS running directly inside your own AWS, GCP, or Azure account, combining a Heroku-like developer experience with underlying Kubernetes scalability.
-
-
-
-- **[Coolify Cloud](https://coolify.io)**  
-
-  Official managed control-plane hosting for Coolify, allowing teams to connect and manage their own VPS servers without maintaining the Coolify dashboard instance.
+| Platform | Valuation / Company Scale | Starting Tier Pricing | Free Tier / Trial Limits | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Heroku (Salesforce)](https://heroku.com)** | **$260B–$320B+** *(Parent Salesforce NYSE: CRM market cap; FY25 revenue ~$37.9B)* | **$5.00/month** (Eco dyno plan; $0.007/hr billed usage) | **No permanent free tier**; entry Eco pool provides **1,000 shared dyno hours/month** across personal apps (sleeps after 30 min inactivity; 512MB RAM cap). Basic always-on dynos start at $7/mo. | Pioneering cloud Platform-as-a-Service (PaaS) offering Git-based deployments, Buildpacks, managed Postgres/Redis add-ons, and simple horizontal dyno scaling. |
+| **[DigitalOcean App Platform](https://digitalocean.com)** | **~$4.4B–$5.2B+** *(NYSE: DOCN market cap; FY25 revenue ~$901M)* | **$5.00/month** (Basic Shared CPU: 1 vCPU, 512MB RAM, 50GB transfer) | **Free forever plan** limited strictly to **static sites**: up to **3 static apps**, 1 GiB/month outbound data transfer, global CDN, and automated SSL (no container/database execution). | Managed PaaS built on DigitalOcean infrastructure enabling automated builds and deployments directly from GitHub/GitLab repositories and container registries. |
+| **[Render](https://render.com)** | **$1.5B** valuation *(Series C unicorn; $258M total funding)* | **$7.00/month** (Individual Starter web service: 512MB RAM, 1 CPU, always-on) | **Free forever plan**: **750 instance hours/month** for web services (512MB RAM, spins down after 15 min idle, 30–60s cold start), free static site hosting, and 1GB Postgres (expires after 30 days). | Unified cloud application platform offering managed web services, static sites, cron jobs, private networking, and zero-downtime deployments via `render.yaml`. |
+| **[Railway](https://railway.com)** | **Growth-stage** *(~$120M total funding; $100M Series B)* | **$5.00/month** (Hobby plan base fee; includes $5 usage credits, always-on execution, and custom domains) | **Free forever plan** with **$1/month recurring usage credit**, 1 project (up to 3 services, 0.5GB RAM & 1 vCPU each, sleeps after 5–10 min inactivity; no custom domains). New accounts receive a **30-day trial with a one-time $5 credit**. | Modern developer cloud PaaS featuring instant Git-push deployments, visual service canvases, built-in PostgreSQL/Redis databases, and usage-based infrastructure scaling. |
+| **[Fly.io](https://fly.io)** | **~$100M–$467M** valuation *(~$110.5M total funding; Series C)* | **$2.19/month** (Micro VM: `shared-cpu-1x` 256MB RAM run 24/7; usage-based per second) | **7-day free trial** with **$1 starter credit** (no credit card required; up to 10 machines, 4GB RAM max, auto-stops after 5 min idle). Post-trial: **$0 bill waiver** for personal orgs whose total monthly usage is under $5. | Edge-first cloud application platform running Docker containers inside lightweight Firecracker microVMs close to users across global regions. |
+| **[Northflank](https://northflank.com)** | **~$120M** estimated valuation *(~$24.9M total funding; Series A)* | **$2.70/month** (Micro container: 0.1 shared vCPU, 256MB RAM; pay-as-you-go) | **Free Developer Sandbox plan** (always-on): up to **2 running services**, **2 scheduled jobs**, **1 managed database addon** (PostgreSQL/Redis/MongoDB), and 1 BYOC cluster. | Full-stack cloud deployment platform uniting multi-cloud Kubernetes orchestration, CI/CD builds, preview environments, and managed databases. |
+| **[Porter Cloud](https://porter.run)** | **Series A startup** *(~$21.5M total funding; $20M Series A)* | **$19.00/month baseline** ($13/mo per vCPU + $6/mo per GB RAM, prorated per minute + cloud provider cost) | **No permanent free tier or standalone trial credit pool**; operates on metered compute while deploying directly into the user's AWS/GCP/Azure account (utilizes user's underlying cloud credits). | Managed PaaS running directly inside your own AWS, GCP, or Azure account, combining a Heroku-like developer experience with underlying Kubernetes scalability. |
+| **[Koyeb](https://koyeb.com)** | **Subsidiary of Mistral AI** *(Acquired Feb 2026; previously raised $8.6M; Mistral AI valued at $13.8B)* | **$29.00/month** (Pro plan base fee; includes $10 compute credit, NVMe storage, and priority builds) | **Free forever plan**: **1 web service** (512MB RAM, 0.1 vCPU, 2GB SSD, sleeps after 1 hour idle; Frankfurt/Washington DC) and **1 PostgreSQL database** (1GB storage, 5 hours active compute/month). | Developer-friendly serverless PaaS providing global edge deployment, auto-scaling, native GPU instances, and Git-driven container execution. |
+| **[Coolify Cloud](https://coolify.io)** | **Bootstrapped / Open-Source** *(~$380k ARR / ~$32k MRR from cloud subscriptions & sponsorships)* | **$5.00/month** (Base cloud control plane; connects and orchestrates up to 2 external VPS servers) | **No free hosted cloud control plane** ($5/mo starting), but the underlying self-hosted open-source software is **100% free forever** on your own VPS with zero artificial feature limitations. | Official managed control-plane hosting for Coolify, allowing teams to connect and manage their own VPS servers without maintaining the Coolify dashboard instance. |
 
 
 
